@@ -1,18 +1,41 @@
-/* Basic Reset */
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body, html {
+    height: 100%;
     font-family: Arial, sans-serif;
 }
 
-header {
+.welcome-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
     background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
+    color: #333;
+    text-align: center; /* Ensure text is centered */
 }
 
-/* Add more styles as needed */
+.welcome-area h1 {
+    font-size: 10vw; /* Responsive font size based on viewport width */
+}
+
+.gallery {
+    background-color: #333;
+    color: #fff;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide parts of the image that exceed the container */
+}
+
+.gallery img {
+    max-width: 100%; /* Ensure it doesn't exceed the width of the screen */
+    max-height: 100vh; /* Ensures it doesn't exceed the height of the viewport */
+    object-fit: cover; /* Cover the area without stretching the image */
+}
